@@ -225,7 +225,8 @@ endmodule
 ```
 **OUTPUT WAVEFORM**:
 
-  ![image](https://github.com/kailashkarthikeyan/VLSI-LAB-EXP-2/assets/160568677/2ac87ef4-02f3-4222-a3ad-e5dcbba3a990)
+![image](https://github.com/kailashkarthikeyan/VLSI-LAB-EXP-2/assets/160568677/49097132-f10a-4f44-9d4c-8e19c16069fe)
+
 
 
 # RESULT
