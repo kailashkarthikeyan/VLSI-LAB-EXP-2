@@ -41,17 +41,11 @@ STEP:11  On the board, by giving required input, the LEDs starts to glow light, 
 **VERILOG CODE**:
 ```
 module encoder(a,y);
-
 input [7:0]a;
-
 output[2:0]y;
-
 or(y[2],a[6],a[5],a[4],a[3]);
-
 or(y[1],a[6],a[5],a[2],a[1]);
-
 or(y[0],a[6],a[4],a[2],a[0]);
-
 endmodule
 ```
 **OUTPUT WAVEFORM**:
@@ -91,40 +85,24 @@ endmodule
 **VERILOG CODE**:
 ```
 module mux(s,c,a);
-
 input [2:0]s;
-
 input [7:0]a;
-
 wire [7:0]w;
-
 output c;
-
 and(w[0],a[0],~s[2],~s[1],~s[0]);
-
 and(w[1],a[1],~s[2],~s[1],s[0]);
-
 and(w[2],a[2],~s[2],s[1],~s[0]);
-
 and(w[3],a[3],~s[2],s[1],s[0]);
-
 and(w[4],a[4],s[2],~s[1],~s[0]);
-
 and(w[5],a[5],s[2],~s[1],s[0]);
-
 and(w[6],a[6],s[2],s[1],~s[0]);
-
 and(w[7],a[7],s[2],s[1],s[0]);
-
 or (c,w[0],w[1],w[2],w[3],w[4],w[5],w[6],w[7]);
-
 endmodule
 ```
 **OUTPUT WAVEFORM**:
 
 ![image](https://github.com/kailashkarthikeyan/VLSI-LAB-EXP-2/assets/160568677/7c23a35c-5e19-4be8-b138-50d2d9298fe1)
-
-
 
 
 # DEMULTIPLEXER
@@ -134,29 +112,17 @@ endmodule
 **VERILOG CODE**:
 ```
 module demux_8(s,a,y);
-
 input [2:0]s;
-
 input a;
-
 output [7:0]y;
-
 and(y[0],a,~s[2],~s[1],~s[0]);
-
 and(y[1],a,~s[2],~s[1],s[0]);
-
 and(y[2],a,~s[2],s[1],~s[0]);
-
 and(y[3],a,~s[2],s[1],s[0]);
-
 and(y[4],a,s[2],~s[1],~s[0]);
-
 and(y[5],a,s[2],~s[1],s[0]);
-
 and(y[6],a,s[2],s[1],~s[0]);
-
 and(y[7],a,s[2],s[1],s[0]);
-
 endmodule
 ```
 **OUTPUT WAVEFORM**:
@@ -171,47 +137,33 @@ endmodule
 **VERILOG CODE**:
 ```
 module comparator(a,b,eq,lt,gt);
-
 input [3:0] a,b;
-
 output reg eq,lt,gt;
-
 always @(a,b)
-
 begin
 
  if (a==b)
- 
  begin
-  
   eq = 1'b1;
   lt = 1'b0;
   gt = 1'b0;
- 
  end
  
  else if (a>b)
- 
  begin
-  
   eq = 1'b0;
   lt = 1'b0;
   gt = 1'b1;
- 
  end
- 
- else
- 
- begin
-  
+
+ else 
+ begin  
   eq = 1'b0;
   lt = 1'b1;
   gt = 1'b0;
- 
  end
 
 end 
-
 endmodule
 ```
 **OUTPUT WAVEFORM**:
