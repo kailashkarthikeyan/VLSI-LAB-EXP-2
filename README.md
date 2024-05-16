@@ -1,4 +1,4 @@
-SIMULATION AND IMPLEMENTATION OF  COMBINATIONAL LOGIC CIRCUITS
+**SIMULATION AND IMPLEMENTATION OF  COMBINATIONAL LOGIC CIRCUITS**
 
 AIM: 
  To simulate and synthesis ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR using Xilinx ISE.
@@ -14,7 +14,7 @@ Spartan6 FPGA
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/3cd1f95e-7531-4cad-9154-fdd397ac439e)
 
 **VERILOG CODE**:
-
+```
 module encoder(a,y);
 
 input [7:0]a;
@@ -28,7 +28,7 @@ or(y[1],a[6],a[5],a[2],a[1]);
 or(y[0],a[6],a[4],a[2],a[0]);
 
 endmodule
-
+```
 **OUTPUT WAVEFORM**:
 
 ![image](https://github.com/kailashkarthikeyan/VLSI-LAB-EXP-2/assets/160568677/43174568-d8f8-4f52-8ccd-36724376ea6b)
@@ -39,7 +39,7 @@ endmodule
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/45a5e6cf-bbe0-4fd5-ac84-e5ad4477483b)
 
 **VERILOG CODE**:
-
+```
 module decoder1(a,y);
 
 input [2:0]a;
@@ -63,7 +63,7 @@ and(y[6],a[2],a[1],~a[0]);
 and(y[7],a[2],a[1],a[0]);
 
 endmodule
-
+```
 **OUTPUT WAVEFORM**:
 
 ![image](https://github.com/kailashkarthikeyan/VLSI-LAB-EXP-2/assets/160568677/5232663a-b8f2-4336-abee-4b8f2e6d585c)
@@ -75,7 +75,7 @@ endmodule
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/427f75b2-8e67-44b9-ac45-a66651787436)
 
 **VERILOG CODE**:
-
+```
 module mux(s,c,a);
 
 input [2:0]s;
@@ -105,7 +105,7 @@ and(w[7],a[7],s[2],s[1],s[0]);
 or (c,w[0],w[1],w[2],w[3],w[4],w[5],w[6],w[7]);
 
 endmodule
-
+```
 **OUTPUT WAVEFORM**:
 
 ![image](https://github.com/kailashkarthikeyan/VLSI-LAB-EXP-2/assets/160568677/7c23a35c-5e19-4be8-b138-50d2d9298fe1)
@@ -118,7 +118,7 @@ endmodule
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/1c45a7fc-08ac-4f76-87f2-c084e7150557)
 
 **VERILOG CODE**:
-
+```
 module demux_8(s,a,y);
 
 input [2:0]s;
@@ -144,7 +144,7 @@ and(y[6],a,s[2],s[1],~s[0]);
 and(y[7],a,s[2],s[1],s[0]);
 
 endmodule
-
+```
 **OUTPUT WAVEFORM**:
 
 ![image](https://github.com/kailashkarthikeyan/VLSI-LAB-EXP-2/assets/160568677/7620ecca-dc2d-482f-a0fa-87572040acfb)
@@ -155,7 +155,7 @@ endmodule
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/b2fe7a05-6bf7-4dcb-8f5d-28abbf7ea8c2)
 
 **VERILOG CODE**:
-
+```
 module comparator(a,b,eq,lt,gt);
 
 input [3:0] a,b;
@@ -199,7 +199,7 @@ begin
 end 
 
 endmodule
-
+```
 **OUTPUT WAVEFORM**:
 
   ![image](https://github.com/kailashkarthikeyan/VLSI-LAB-EXP-2/assets/160568677/2ac87ef4-02f3-4222-a3ad-e5dcbba3a990)
